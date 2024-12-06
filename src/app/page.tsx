@@ -58,6 +58,8 @@ export default function Home() {
     setFilteredMembers([]);
     setIsDropdownOpen(false);
 
+    setGuesses([...guesses, member]);
+
     if (member === dailyMember) {
       setGuessed(true);
       let points = localStorage.getItem('lsd_points');
@@ -68,9 +70,9 @@ export default function Home() {
       }
 
       localStorage.setItem('lsd_points', points.toString());
+      localStorage.setItem('last_member', JSON.stringify(member));
+      localStorage.setItem('last_guesses', JSON.stringify([...guesses, member]));
     }
-    
-    setGuesses([...guesses, member]);
     console.log('guesses', guesses);
   };
 
@@ -87,6 +89,12 @@ export default function Home() {
 
   useEffect(() => {
     setDailyMember(getDailyMember(members));
+
+    const lastMember = localStorage.getItem('last_member');
+    if (lastMember) {
+      setGuessed(true);
+      setGuesses(JSON.parse(localStorage.getItem('last_guesses') || '[]'));
+    }
 
     const handleClickOutside = (event: MouseEvent) => {
       if (

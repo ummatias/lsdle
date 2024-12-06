@@ -279,5 +279,16 @@
         "gender": "Masculino",
         "graduation_level": "Graduação",
         "project": "IBM - LLM"
+    },
+    {
+        "name": "Ronaldd Matias",
+        "room": "Carvalheira",
+        "area": "AI",
+        "born_year": 2004,
+        "gender": "Masculino",
+        "graduation_level": "Graduação",
+        "lsd_year": [2024],
+        "project": "IBM - LLM",
+        "ufcg_year": 2023
     }
 ]

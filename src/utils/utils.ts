@@ -22,7 +22,6 @@ const formatGuessYear = (guess: string | number | number[], fieldName: keyof Mem
   const dailyValue = dailyMember[fieldName];
 
   if (Array.isArray(guess) && Array.isArray(dailyValue)) {
-    // Handle case where both guess and dailyValue are arrays
     return guess
       .map((year) => {
         if (dailyValue.includes(year)) {
