@@ -1,0 +1,80 @@
+[
+    {
+        "name": "Anna Beatriz",
+        "room": "Rainha",
+        "gender": "Mulher",
+        "project": "Vtex Lab",
+        "graduation_level": "Mestrado",
+        "lsd_year": [2020, 2022],
+        "born_year": 2001,
+        "area": "Performace",
+        "ufcg_year": 2019
+    },
+    {
+        "name": "Ruan Gomes",
+        "room": "Rainha",
+        "project": "Vtex Lab",
+        "gender": "Homem",
+        "graduation_level": "Mestrado",
+        "lsd_year": [2022],
+        "born_year": 1999,
+        "area": "Performace",
+        "ufcg_year": 2018
+    },
+    {
+        "name": "João Henrique (Jotão)",
+        "room": "Rainha",
+        "project": "Vtex Lab",
+        "gender": "Homem",
+        "graduation_level": "Graduação",
+        "lsd_year": [2023],
+        "born_year": 2002,
+        "area": "AI",
+        "ufcg_year": 2021
+    },
+    {
+        "name": "Moab Alves",
+        "room": "Rainha",
+        "project": "Vtex Lab",
+        "gender": "Homem",
+        "graduation_level": "Graduação",
+        "lsd_year": [2023],
+        "born_year": 2002,
+        "area": "AI",
+        "ufcg_year": 2021
+    },
+    {
+        "name": "Bibi",
+        "room": "Rainha",
+        "project": "Vtex Lab",
+        "gender": "Mulher",
+        "graduation_level": "Graduação",
+        "lsd_year": [2024],
+        "born_year": 2002,
+        "area": "Performace",
+        "ufcg_year": 2021
+    },
+    {
+        "name": "Eric",
+        "room": "Rainha",
+        "project": "Vtex Lab",
+        "gender": "Homem",
+        "graduation_level": "Graduação",
+        "lsd_year": [2024],
+        "born_year": 2002,
+        "area": "INFRA",
+        "ufcg_year": 2021
+    },
+    {
+        "name": "Caetano",
+        "room": "Rainha",
+        "project": "Vtex Lab",
+        "gender": "Homem",
+        "graduation_level": "Graduação",
+        "lsd_year": [2021],
+        "born_year": 1998,
+        "area": "INFRA",
+        "ufcg_year": 2016
+    }
+
+]

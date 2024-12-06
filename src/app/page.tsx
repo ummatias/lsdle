@@ -1,100 +1,206 @@
-import Image from "next/image";
+'use client';
+import Head from 'next/head';
+import { useState, useEffect, useRef } from 'react';
+import { FaGithub } from 'react-icons/fa';
+import data from './data/data.json';
+import { Member } from '@/types/member';
+import { getDailyMember } from '@/utils/utils';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const members: Member[] = data;
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const colors = [
+    '#52BEBD',
+    '#5474B7',
+    '#7069AE',
+    '#AD689E',
+    '#DE5764',
+    '#DD9356',
+  ];
+
+  const fields: [string, keyof Member][] = [
+    ['Nome', 'name'],
+    ['Sala', 'room'],
+    ['Projeto', 'project'],
+    ['Gênero', 'gender'],
+    ['Graduação', 'graduation_level'],
+    ['Atuação', 'area'],
+    ['Entrou LSD', 'lsd_year'],
+    ['Nascimento', 'born_year'],
+    ['Entrou na UFCG', 'ufcg_year']
+  ]
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredMembers, setFilteredMembers] = useState<Member[]>([]);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [dailyMember, setDailyMember] = useState<Member | null>(null);
+  const [guesses, setGuesses] = useState<Member[]>([]);
+
+  const inputRef = useRef<HTMLInputElement | null>(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+
+  const getHoverColor = (index: number) => colors[index % colors.length];
+
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    setSearchQuery(value);
+    setFilteredMembers(
+      members.filter((member) =>
+        member.name.toLowerCase().includes(value.toLowerCase())
+      )
+    );
+    setIsDropdownOpen(value.length > 0 && filteredMembers.length > 0);
+  };
+
+  const handleOptionClick = (member: Member) => {
+    setSearchQuery(member.name);
+    setFilteredMembers([]);
+    setIsDropdownOpen(false);
+
+    if (guesses.includes(member)) {
+      console.log('You already guessed this member');
+      return;
+    }
+    
+    setGuesses([...guesses, member]);
+    console.log('guesses', guesses);
+  };
+
+  useEffect(() => {
+    setDailyMember(getDailyMember(members));
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node) &&
+        inputRef.current &&
+        !inputRef.current.contains(event.target as Node)
+      ) {
+        setIsDropdownOpen(false);
+      }
+    };
+    console.log('dailyMember', dailyMember);
+    setGuesses([members[1], members[2]])
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [dailyMember]);
+
+  return (
+    <div className="h-screen flex flex-col bg-gray-100">
+      <Head>
+        <title>LSDLE Search</title>
+        <meta name="description" content="A search with autocomplete feature" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main className="flex flex-col justify-center bg-gray-100 h-full py-32 flex-grow">
+        <div className="text-center">
+          <img src="/lsd-logo.png" alt="logo" className="h-32 mx-auto mb-8" />
+
+          <div className="bg-white p-8 rounded-xl shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)] w-[400px] mx-auto">
+            <h1 className="text-4xl font-semibold text-gray-800 mb-4">
+              Bem-vindo ao LSDLE
+            </h1>
+            <p className="text-gray-500 mb-6">
+              Adivinhe o membro do LSD de hoje!
+            </p>
+            <div className="relative">
+              <input
+                ref={inputRef}
+                type="text"
+                className="w-full p-4 text-lg text-gray-700 bg-gray-100 rounded-lg focus:border-[#52BEBD] focus:outline-none shadow-[inset_0rem_0.2rem_0.4rem_0_rgb(0,0,0,0.1)]"
+                placeholder="Digite o nome do membro"
+                value={searchQuery}
+                onChange={handleSearchChange}
+              />
+              {isDropdownOpen && filteredMembers.length > 0 && (
+                <div
+                  ref={dropdownRef}
+                  className="absolute left-0 right-0 mt-2 bg-white rounded-lg z-10 shadow-md"
+                >
+                  {filteredMembers.map((member, index) => (
+                    <div
+                      key={index}
+                      className="px-4 py-2 text-gray-800 cursor-pointer transition duration-20"
+                      style={{
+                        backgroundColor: 'transparent',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor =
+                          getHoverColor(index);
+                        e.currentTarget.style.color = '#FFFFFF';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = 'transparent';
+                        e.currentTarget.style.color = '#4A4A4A';
+                      }}
+                      onClick={() => handleOptionClick(member)}
+                    >
+                      {member.name}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 mx-auto px-4">
+          <table className="table-auto w-full border-collapse border border-gray-200">
+            <thead>
+              <tr className="bg-gray-100">
+                {fields.map((field, index) => (
+                  <th key={index} className="text-lg font-semibold text-gray-800 border border-gray-300 px-4 py-2">
+                    {field[0]}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {guesses.map((guess, rowIndex) => (
+                <tr key={rowIndex} className="even:bg-gray-50 odd:bg-white">
+                  {fields.map((field, colIndex) => (
+                    <td
+                      key={colIndex}
+                      className="text-lg text-gray-800 text-center border border-gray-300 px-4 py-2"
+                      >
+                      {guess[field[1]]}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="py-2">
+        <div className="text-center text-gray-400">
+          <p className="mb-2 flex justify-center items-center gap-2">
+            Desenvolvido com{' '}
+            <span
+              className="text-black-500 animate-pulse"
+              style={{
+                animationDuration: '1.5s',
+                animationIterationCount: 'infinite',
+              }}
+            >
+              🖤
+            </span>{' '}
+            pela equipe da Carvalheira!
+          </p>
+          <a
+            href="https://github.com/llm-pt-ibm/helm_model_autoconfig"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-gray-400 hover:text-gray-600 transition"
+          >
+            <FaGithub className="text-2xl" />
+            Acesse o repositório no GitHub
+          </a>
+        </div>
       </footer>
     </div>
   );
