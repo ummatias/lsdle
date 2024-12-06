@@ -2,10 +2,12 @@
     {
         "name": "Anna Beatriz",
         "room": "Rainha",
-        "gender": "Mulher",
         "project": "Vtex Lab",
         "graduation_level": "Mestrado",
-        "lsd_year": [2020, 2022],
+        "lsd_year": [
+            2020,
+            2022
+        ],
         "born_year": 2001,
         "area": "Performace",
         "ufcg_year": 2019
@@ -14,9 +16,10 @@
         "name": "Ruan Gomes",
         "room": "Rainha",
         "project": "Vtex Lab",
-        "gender": "Homem",
         "graduation_level": "Mestrado",
-        "lsd_year": [2022],
+        "lsd_year": [
+            2022
+        ],
         "born_year": 1999,
         "area": "Performace",
         "ufcg_year": 2018
@@ -25,9 +28,10 @@
         "name": "João Henrique (Jotão)",
         "room": "Rainha",
         "project": "Vtex Lab",
-        "gender": "Homem",
         "graduation_level": "Graduação",
-        "lsd_year": [2023],
+        "lsd_year": [
+            2023
+        ],
         "born_year": 2002,
         "area": "AI",
         "ufcg_year": 2021
@@ -36,9 +40,10 @@
         "name": "Moab Alves",
         "room": "Rainha",
         "project": "Vtex Lab",
-        "gender": "Homem",
         "graduation_level": "Graduação",
-        "lsd_year": [2023],
+        "lsd_year": [
+            2023
+        ],
         "born_year": 2002,
         "area": "AI",
         "ufcg_year": 2021
@@ -47,9 +52,10 @@
         "name": "Bibi",
         "room": "Rainha",
         "project": "Vtex Lab",
-        "gender": "Mulher",
         "graduation_level": "Graduação",
-        "lsd_year": [2024],
+        "lsd_year": [
+            2024
+        ],
         "born_year": 2002,
         "area": "Performace",
         "ufcg_year": 2021
@@ -58,9 +64,10 @@
         "name": "Eric",
         "room": "Rainha",
         "project": "Vtex Lab",
-        "gender": "Homem",
         "graduation_level": "Graduação",
-        "lsd_year": [2024],
+        "lsd_year": [
+            2024
+        ],
         "born_year": 2002,
         "area": "INFRA",
         "ufcg_year": 2021
@@ -69,12 +76,108 @@
         "name": "Caetano",
         "room": "Rainha",
         "project": "Vtex Lab",
-        "gender": "Homem",
         "graduation_level": "Graduação",
-        "lsd_year": [2021],
+        "lsd_year": [
+            2021
+        ],
         "born_year": 1998,
         "area": "INFRA",
         "ufcg_year": 2016
+    },
+    {
+        "name": "Andresa Farias",
+        "room": "Volúpia",
+        "project": "Vtex Lab",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2024
+        ],
+        "born_year": 2002,
+        "area": "INFRA",
+        "ufcg_year": 2022
+    },
+    {
+        "name": "Geraldo",
+        "room": "Volúpia",
+        "project": "Vtex Lab",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2024
+        ],
+        "born_year": 2003,
+        "area": "INFRA",
+        "ufcg_year": 2021
+    },
+    {
+        "name": "Julia Leal",
+        "room": "Volúpia",
+        "project": "Vtex Lab",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2024
+        ],
+        "born_year": 2005,
+        "area": "INFRA",
+        "ufcg_year": 2023
+    },
+    {
+        "name": "Oscar Brito",
+        "room": "Volúpia",
+        "project": "Vtex Lab",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2024
+        ],
+        "born_year": 2004,
+        "area": "INFRA",
+        "ufcg_year": 2023
+    },
+    {
+        "name": "Bruno Grangeiro",
+        "room": "Volúpia",
+        "project": "Vtex Lab",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2023
+        ],
+        "born_year": 2001,
+        "area": "INFRA",
+        "ufcg_year": 2020
+    },
+    {
+        "name": "Caio Galvão",
+        "room": "Volúpia",
+        "project": "Vtex Lab",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2022
+        ],
+        "born_year": 2001,
+        "area": "CLOUD",
+        "ufcg_year": 2020
+    },
+    {
+        "name": "Pedro Serey",
+        "room": "Volúpia",
+        "project": "Vtex Lab",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2022
+        ],
+        "born_year": 2002,
+        "area": "CLOUD",
+        "ufcg_year": 2020
+    },
+    {
+        "name": "Ezequias",
+        "room": "Volúpia",
+        "project": "Vtex Lab",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2022
+        ],
+        "born_year": 2002,
+        "area": "INFRA",
+        "ufcg_year": 2020
     }
-
 ]
