@@ -2,6 +2,8 @@
 
 Welcome to **LSDLE**, the game where you identify the LSD member of the day!
 
+![image](https://github.com/user-attachments/assets/deb5eae9-1158-48c4-8f36-11c7f2bae577)
+
 ## Overview
 
 LSDLE is a fun and interactive game where you try to guess the correct member of the day. Each day, a new member of LSD is selected, and you must use the clues provided to deduce who it is. The faster you identify the correct member, the more points you earn. Compete with friends and other players to see who can find the LSD member the fastest!
