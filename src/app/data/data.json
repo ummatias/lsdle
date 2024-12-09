@@ -10,7 +10,7 @@
             2020,
             2022
         ],
-        "area":"Performance",
+        "area":["Performance"],
         "gender":"Feminino",
         "ufcg_year":2019
     },
@@ -24,7 +24,7 @@
         "lsd_year":[
             2022
         ],
-        "area":"Performance",
+        "area":["Performance"],
         "gender":"Masculino",
         "ufcg_year":2018
     },
@@ -39,7 +39,7 @@
             2023
         ],
         "gender":"Masculino",
-        "area":"AI",
+        "area":["AI"],
         "ufcg_year":2021
     },
     {
@@ -53,7 +53,7 @@
             2023
         ],
         "gender":"Masculino",
-        "area":"AI",
+        "area":["AI"],
         "ufcg_year":2021
     },
     {
@@ -66,7 +66,7 @@
         "lsd_year":[
             2024
         ],
-        "area":"Performance",
+        "area":["Performance"],
         "ufcg_year":2021,
         "gender":"Feminino"
     },
@@ -81,7 +81,7 @@
             2024
         ],
         "gender":"Masculino",
-        "area":"INFRA",
+        "area":["INFRA"],
         "ufcg_year":2021
     },
     {
@@ -95,7 +95,7 @@
             2021
         ],
         "gender":"Masculino",
-        "area":"INFRA",
+        "area":["INFRA"],
         "ufcg_year":2016
     },
     {
@@ -109,7 +109,7 @@
             2024
         ],
         "gender":"Feminino",
-        "area":"INFRA",
+        "area":["INFRA"],
         "ufcg_year":2022
     },
     {
@@ -123,7 +123,7 @@
             2024
         ],
         "gender":"Masculino",
-        "area":"INFRA",
+        "area":["INFRA"],
         "ufcg_year":2021
     },
     {
@@ -136,7 +136,7 @@
         "lsd_year":[
             2024
         ],
-        "area":"INFRA",
+        "area":["INFRA"],
         "gender":"Feminino",
         "ufcg_year":2023
     },
@@ -151,7 +151,7 @@
             2024
         ],
         "gender":"Masculino",
-        "area":"INFRA",
+        "area":["INFRA"],
         "ufcg_year":2023
     },
     {
@@ -165,7 +165,7 @@
             2023
         ],
         "ufcg_year":2021,
-        "area":"INFRA",
+        "area":["INFRA"],
         "gender":"Masculino"
     },
     {
@@ -179,7 +179,7 @@
             2023
         ],
         "gender":"Masculino",
-        "area":"INFRA",
+        "area":["INFRA"],
         "ufcg_year":2020
     },
     {
@@ -193,7 +193,7 @@
             2022
         ],
         "gender":"Masculino",
-        "area":"CLOUD",
+        "area":["CLOUD"],
         "ufcg_year":2020
     },
     {
@@ -207,7 +207,7 @@
             2022
         ],
         "gender":"Masculino",
-        "area":"CLOUD",
+        "area":["CLOUD"],
         "ufcg_year":2020
     },
     {
@@ -221,7 +221,7 @@
             2022
         ],
         "gender":"Masculino",
-        "area":"INFRA",
+        "area":["INFRA"],
         "ufcg_year":2020
     },
     {
@@ -237,7 +237,7 @@
             2024
         ],
         "ufcg_year":2019,
-        "area":"AI",
+        "area":["AI"],
         "gender":"Masculino"
     },
     {
@@ -252,7 +252,7 @@
             2020
         ],
         "gender":"Masculino",
-        "area":"Performance",
+        "area":["Performance"],
         "ufcg_year":2017
     },
     {
@@ -279,7 +279,7 @@
         "lsd_year":[
             2024
         ],
-        "area":"AI",
+        "area":["AI"],
         "gender":"Masculino",
         "ufcg_year":2024,
         "image":"https://iriedsonsouto.github.io/my-site/static/media/ucanbaby.449c78f936464f570557.png"
@@ -287,7 +287,7 @@
     {
         "name":"Lucas Pereira",
         "room":"Carvalheira",
-        "area":"AI",
+        "area":["AI"],
         "lsd_year":[
             2024
         ],
@@ -301,7 +301,7 @@
     {
         "name":"Mateus Matias",
         "room":"Carvalheira",
-        "area":"AI",
+        "area":["AI"],
         "lsd_year":[
             2021
         ],
@@ -315,7 +315,7 @@
     {
         "name":"Ronaldd Matias",
         "room":"Carvalheira",
-        "area":"AI",
+        "area":["AI"],
         "gender":"Masculino",
         "graduation_level":"Graduação",
         "lsd_year":[
@@ -329,7 +329,7 @@
     {
         "name":"José Matheus",
         "room":"Carvalheira",
-        "area":"AI",
+        "area":["AI"],
         "project":[
             "IBM - LLM"
         ],
@@ -344,9 +344,9 @@
         "name":"Thiago Emanuel (Manel)",
         "room":"Bruxaxá",
         "area":[
-            "Performance",
+            ["Performance",
             "CLOUD",
-            "INFRA"
+            "INFRA"]
         ],
         "project":[
             "Vtex Lab",
@@ -364,8 +364,8 @@
         "name":"Fabio Morais",
         "room":"Caruçu",
         "area":[
-            "IA",
-            "Performance"
+            ["AI",
+            "Performance"]
         ],
         "project":[
             "Vtex Lab",
