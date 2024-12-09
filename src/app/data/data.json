@@ -398,5 +398,43 @@
         "graduation_level": "Doutorado",
         "name": "Francisco Brasileiro (Fubica)",
         "room": "Bruxaxá"
+    },
+    {
+        "name": "Ana Virgínia",
+        "room": "Rainha",
+        "project": [
+            "Vtex Lab"
+        ],
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2024
+        ],
+        "area": ["Performance"],
+        "ufcg_year": 2022,
+        "gender": "Feminino"
+    },
+    {
+        "name": "Nícolas Brandão",
+        "room": "Volúpia",
+        "project": [
+            "Vtex Lab"
+        ],
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2024
+        ],
+        "area": ["Performance"],
+        "ufcg_year": 2024,
+        "gender": "Masculino"
+    },
+    {
+        "name": "Thallyson Alves",
+        "area": ["AI"],
+        "gender": "Masculino",
+        "graduation_level": "Graduação",
+        "lsd_year": [2020],
+        "project": [ "Dell AI Channels", "IBM - LLM"],
+        "room": "Carvalheira",
+        "ufcg_year": 2016
     }
 ]
