@@ -7,7 +7,6 @@ import { Member } from '@/types/member';
 import { formatGuess, getDailyMember } from '@/utils/utils';
 
 export default function Home() {
-  const members: Member[] = data;
 
   const colors = [
     '#52BEBD',
@@ -29,6 +28,7 @@ export default function Home() {
     ['Entrou na UFCG', 'ufcg_year']
   ]
 
+  const [members, setMembers] = useState<Member[]>(data);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredMembers, setFilteredMembers] = useState<Member[]>([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -53,11 +53,11 @@ export default function Home() {
   };
 
   const handleOptionClick = (member: Member) => {
-    setSearchQuery(member.name);
+    setSearchQuery('');
     setFilteredMembers([]);
     setIsDropdownOpen(false);
-
-    setGuesses([...guesses, member]);
+    setGuesses([member, ...guesses]);
+    setMembers(members.filter((m) => m.name !== member.name));
 
     if (member === dailyMember) {
       setGuessed(true);
@@ -72,7 +72,6 @@ export default function Home() {
       localStorage.setItem('last_member', JSON.stringify(member));
       localStorage.setItem('last_guesses', JSON.stringify([...guesses, member]));
     }
-    console.log('guesses', guesses);
   };
 
   function handleGuessColor(guess: string | number | number[] | string[], field: keyof Member) {
@@ -87,6 +86,7 @@ export default function Home() {
   }
 
   useEffect(() => {
+    setMembers(data);
     setDailyMember(getDailyMember(members));
 
     const lastMember = localStorage.getItem('last_member');
@@ -113,18 +113,12 @@ export default function Home() {
 
   return (
     <div className="h-screen flex flex-col bg-gray-100">
-      <Head>
-        <title>LSDLE Search</title>
-        <meta name="description" content="A search with autocomplete feature" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex flex-col justify-center bg-gray-100 h-full py-32 flex-grow">
+      <main className="flex flex-col justify-center bg-gray-100 flex-grow overflow-hidden">
         <div className="text-center">
           <img src="/lsd-logo.png" alt="logo" className="h-32 mx-auto mb-8" />
 
           {!guessed && (
-            <div className="bg-white p-8 rounded-xl shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)] w-[400px] mx-auto">
+            <div className="bg-white p-8 rounded-xl w-[400px] mx-auto shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)]">
               <h1 className="text-4xl font-semibold text-gray-800 mb-4">
                 Bem-vindo ao LSDLE
               </h1>
@@ -135,7 +129,7 @@ export default function Home() {
                 <input
                   ref={inputRef}
                   type="text"
-                  className="w-full p-4 text-lg text-gray-700 bg-gray-100 rounded-lg focus:border-[#52BEBD] focus:outline-none shadow-[inset_0rem_0.2rem_0.4rem_0_rgb(0,0,0,0.1)]"
+                  className="w-full p-4 text-lg text-gray-700 bg-gray-100 rounded-lg focus:border-[#52BEBD] focus:outline-none shadow-inner"
                   placeholder="Digite o nome do membro"
                   value={searchQuery}
                   onChange={handleSearchChange}
@@ -147,19 +141,20 @@ export default function Home() {
                     style={{
                       maxHeight: filteredMembers.length > 5 ? '200px' : 'auto',
                       overflowY: filteredMembers.length > 5 ? 'auto' : 'visible',
-                      scrollbarColor: '#4A4A4A #FFFFFF',
+                      scrollbarColor: '#4A4A4A #E5E7EB',
                       scrollbarWidth: 'thin',
                     }}
                   >
                     {filteredMembers.map((member, index) => (
                       <div
                         key={index}
-                        className="px-4 py-2 text-gray-800 cursor-pointer transition duration-20"
+                        className="px-4 py-2 text-gray-800 cursor-pointer transition duration-200"
                         style={{
                           backgroundColor: 'transparent',
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.backgroundColor = getHoverColor(index);
+                          e.currentTarget.style.backgroundColor =
+                            getHoverColor(index);
                           e.currentTarget.style.color = '#FFFFFF';
                         }}
                         onMouseLeave={(e) => {
@@ -178,51 +173,65 @@ export default function Home() {
           )}
 
           {guessed && (
-            <div className="bg-white p-8 rounded-xl shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)] w-[400px] mx-auto">
+            <div className="bg-white p-8 rounded-xl shadow-md w-[400px] mx-auto">
               <h1 className="text-4xl font-semibold text-gray-800 mb-4">
                 Parabéns!
               </h1>
               <p className="text-gray-500 mb-6">
-                Você acertou o membro do LSD de hoje em <span className="font-semibold"
-                >{guesses.length}</span> tentativas!
+                Você acertou o membro do LSD de hoje em{' '}
+                <span className="font-semibold">{guesses.length}</span> tentativas!
               </p>
             </div>
           )}
         </div>
 
         {guesses.length > 0 && (
-        <div className="mt-12 mx-auto px-4 sm:overflow-x-auto">
-          <table className="table-auto w-full border-collapse border border-gray-200">
-            <thead>
-              <tr className="bg-gray-100">
-                {fields.map((field, index) => (
-                  <th key={index} className="text-lg font-semibold text-gray-800 border border-gray-300 px-4 py-2">
-                    {field[0]}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {dailyMember && guesses.map((guess, rowIndex) => (
-                <tr key={rowIndex} className="even:bg-gray-50 odd:bg-white">
-                  {fields.map((field, colIndex) => (
-                    <td
-                      key={colIndex}
-                      className={`text-lg text-gray-800 text-center border border-gray-300 px-4 py-2 ${handleGuessColor(guess[field[1]], field[1])}`}
+          <div
+            className="mt-12 mx-auto w-7xl h-[220px] overflow-hidden sm:w-9/12"
+            style={{
+              maxHeight: guesses.length > 2 ? '220px' : 'auto',
+              overflowY: guesses.length > 2 ? 'auto' : 'visible',
+              scrollbarColor: '#4A4A4A #E5E7EB',
+              scrollbarWidth: 'thin',
+            }}
+          >
+            <table className="table-auto w-7xl border-collapse border border-gray-200">
+              <thead>
+                <tr className='sticky top-0 z-9 bg-gray-100'>
+                  {fields.map((field, index) => (
+                    <th
+                      key={index}
+                      className="text-lg font-semibold text-gray-800 border border-gray-300 px-4 py-2"
                     >
-                      {formatGuess(guess[field[1]], field[1], dailyMember)}
-                    </td>
-                  
+                      {field[0]}
+                    </th>
                   ))}
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody>
+                {dailyMember &&
+                  guesses.map((guess, rowIndex) => (
+                    <tr key={rowIndex} className="even:bg-gray-50 odd:bg-white">
+                      {fields.map((field, colIndex) => (
+                        <td
+                          key={colIndex}
+                          className={`text-lg text-gray-800 text-center border border-gray-300 px-4 py-2 ${handleGuessColor(
+                            guess[field[1]],
+                            field[1]
+                          )}`}
+                        >
+                          {formatGuess(guess[field[1]], field[1], dailyMember)}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
         )}
       </main>
 
-      <footer className="py-2">
+      <footer className="py-2 flex-shrink-0">
         <div className="text-center text-gray-400">
           <p className="mb-2 flex justify-center items-center gap-2">
             Desenvolvido com{' '}
