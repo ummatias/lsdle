@@ -6,7 +6,7 @@ type Member = {
     project: string[];
     graduation_level: string;
     lsd_year: number[];
-    area: string | string[];
+    area: string[];
     gender: string;
     ufcg_year: number;
 }

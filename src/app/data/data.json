@@ -265,7 +265,7 @@
         "lsd_year":[
             2022
         ],
-        "area":"Segurança",
+        "area":["Segurança"],
         "gender":"Masculino",
         "ufcg_year":2019
     },
@@ -313,8 +313,8 @@
         ]
     },
     {
-        "name":"Ronaldd Matias",
-        "room":"Carvalheira",
+        "name": "Ronaldd Matias",
+        "room": "Carvalheira",
         "area":["AI"],
         "gender":"Masculino",
         "graduation_level":"Graduação",
@@ -327,9 +327,9 @@
         "ufcg_year":2023
     },
     {
-        "name":"José Matheus",
-        "room":"Carvalheira",
-        "area":["AI"],
+        "name": "José Matheus",
+        "room": "Carvalheira",
+        "area": ["AI"],
         "project":[
             "IBM - LLM"
         ],
@@ -341,12 +341,12 @@
         "gender":"Masculino"
     },
     {
-        "name":"Thiago Emanuel (Manel)",
-        "room":"Bruxaxá",
-        "area":[
-            ["Performance",
+        "name": "Thiago Emanuel (Manel)",
+        "room": "Bruxaxá",
+        "area": [
+            "Performance",
             "CLOUD",
-            "INFRA"]
+            "INFRA"
         ],
         "project":[
             "Vtex Lab",
@@ -361,11 +361,11 @@
         "gender":"Masculino"
     },
     {
-        "name":"Fabio Morais",
-        "room":"Caruçu",
-        "area":[
-            ["AI",
-            "Performance"]
+        "name": "Fabio Morais",
+        "room": "Caruçu",
+        "area": [
+            "AI",
+            "Performance"
         ],
         "project":[
             "Vtex Lab",
@@ -386,7 +386,7 @@
         "room": "Hall",
         "gender": "Feminino",
         "graduation_level": "Graduação",
-        "area": [ "Secretariado "],
+        "area": [ "Secretariado"],
         "project": [ "None" ]
     },
     {
