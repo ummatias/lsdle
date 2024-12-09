@@ -187,7 +187,7 @@ export default function Home() {
 
         {guesses.length > 0 && (
           <div
-            className="mt-12 mx-auto w-7xl h-[220px] overflow-hidden sm:w-9/12"
+            className="mt-12 w-full h-[220px] px-4 py-2 overflow-x-auto"
             style={{
               maxHeight: guesses.length > 2 ? '220px' : 'auto',
               overflowY: guesses.length > 2 ? 'auto' : 'visible',
@@ -195,13 +195,13 @@ export default function Home() {
               scrollbarWidth: 'thin',
             }}
           >
-            <table className="table-auto w-7xl border-collapse border border-gray-200">
+            <table className="table-auto w-7xl border-collapse border border-gray-200 mx-auto">
               <thead>
                 <tr className='sticky top-0 z-9 bg-gray-100'>
                   {fields.map((field, index) => (
                     <th
                       key={index}
-                      className="text-lg font-semibold text-gray-800 border border-gray-300 px-4 py-2"
+                      className="text-lg font-semibold text-gray-800 border border-gray-200 px-4 py-2"
                     >
                       {field[0]}
                     </th>
@@ -211,14 +211,15 @@ export default function Home() {
               <tbody>
                 {dailyMember &&
                   guesses.map((guess, rowIndex) => (
-                    <tr key={rowIndex} className="even:bg-gray-50 odd:bg-white">
+                    <tr key={rowIndex} className="border border-gray-200">
                       {fields.map((field, colIndex) => (
                         <td
                           key={colIndex}
-                          className={`text-lg text-gray-800 text-center border border-gray-300 px-4 py-2 ${handleGuessColor(
+                          className={`text-lg text-gray-800 text-center border border-gray-200 px-4 py-2 ${handleGuessColor(
                             guess[field[1]],
                             field[1]
-                          )}`}
+                          )}
+                          `}
                         >
                           {formatGuess(guess[field[1]], field[1], dailyMember)}
                         </td>
