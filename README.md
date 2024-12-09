@@ -25,7 +25,7 @@ To add your information to the game, you need to edit the `src/app/data/data.jso
     "gender": "Your gender",
     "graduation_level": "Your graduation level",
     "lsd_year": "The year you joined LSD; if there is more than one year, list them as [year1, year2]",
-    "area": "The area you work in", list as [ area1, area2],
+    "area": "The area you work in, list as [ area1, area2]",
     "ufcg_year": "The year you joined UFCG"
 }
 ```
