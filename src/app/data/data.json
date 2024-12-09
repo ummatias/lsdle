@@ -1,294 +1,402 @@
 [
     {
-        "name": "Anna Beatriz",
-        "room": "Rainha",
-        "project": "Vtex Lab",
-        "graduation_level": "Mestrado",
-        "lsd_year": [
+        "name":"Anna Beatriz",
+        "room":"Rainha",
+        "project":[
+            "Vtex Lab"
+        ],
+        "graduation_level":"Mestrado",
+        "lsd_year":[
             2020,
             2022
         ],
-        "born_year": 2001,
-        "area": "Performace",
-        "gender": "Feminino",
-        "ufcg_year": 2019
+        "area":"Performance",
+        "gender":"Feminino",
+        "ufcg_year":2019
     },
     {
-        "name": "Ruan Gomes",
-        "room": "Rainha",
-        "project": "Vtex Lab",
-        "graduation_level": "Mestrado",
-        "lsd_year": [
+        "name":"Ruan Gomes",
+        "room":"Rainha",
+        "project":[
+            "Vtex Lab"
+        ],
+        "graduation_level":"Mestrado",
+        "lsd_year":[
             2022
         ],
-        "born_year": 1999,
-        "area": "Performace",
-        "gender": "Masculino",
-        "ufcg_year": 2018
+        "area":"Performance",
+        "gender":"Masculino",
+        "ufcg_year":2018
     },
     {
-        "name": "João Henrique (Jotão)",
-        "room": "Rainha",
-        "project": "Vtex Lab",
-        "graduation_level": "Graduação",
-        "lsd_year": [
+        "name":"João Henrique (Jotão)",
+        "room":"Rainha",
+        "project":[
+            "Vtex Lab"
+        ],
+        "graduation_level":"Graduação",
+        "lsd_year":[
             2023
         ],
-        "born_year": 2002,
-        "gender": "Masculino",
-        "area": "AI",
-        "ufcg_year": 2021
+        "gender":"Masculino",
+        "area":"AI",
+        "ufcg_year":2021
     },
     {
-        "name": "Moab Alves",
-        "room": "Rainha",
-        "project": "Vtex Lab",
-        "graduation_level": "Graduação",
-        "lsd_year": [
+        "name":"Moab Alves",
+        "room":"Rainha",
+        "project":[
+            "Vtex Lab"
+        ],
+        "graduation_level":"Graduação",
+        "lsd_year":[
             2023
         ],
-        "born_year": 2002,
-        "gender": "Masculino",
-        "area": "AI",
-        "ufcg_year": 2021
+        "gender":"Masculino",
+        "area":"AI",
+        "ufcg_year":2021
     },
     {
-        "name": "Bibi",
-        "room": "Rainha",
-        "project": "Vtex Lab",
-        "graduation_level": "Graduação",
-        "lsd_year": [
+        "name":"Bibi",
+        "room":"Rainha",
+        "project":[
+            "Vtex Lab"
+        ],
+        "graduation_level":"Graduação",
+        "lsd_year":[
             2024
         ],
-        "born_year": 2002,
-        "area": "Performace",
-        "ufcg_year": 2021,
-        "gender": "Feminino"
+        "area":"Performance",
+        "ufcg_year":2021,
+        "gender":"Feminino"
     },
     {
-        "name": "Eric",
-        "room": "Rainha",
-        "project": "Vtex Lab",
-        "graduation_level": "Graduação",
-        "lsd_year": [
+        "name":"Eric",
+        "room":"Rainha",
+        "project":[
+            "Vtex Lab"
+        ],
+        "graduation_level":"Graduação",
+        "lsd_year":[
             2024
         ],
-        "born_year": 2002,
-        "gender": "Masculino",
-        "area": "INFRA",
-        "ufcg_year": 2021
+        "gender":"Masculino",
+        "area":"INFRA",
+        "ufcg_year":2021
     },
     {
-        "name": "Caetano",
-        "room": "Rainha",
-        "project": "Vtex Lab",
-        "graduation_level": "Graduação",
-        "lsd_year": [
+        "name":"Caetano",
+        "room":"Rainha",
+        "project":[
+            "Vtex Lab"
+        ],
+        "graduation_level":"Mestrado",
+        "lsd_year":[
             2021
         ],
-        "born_year": 1998,
-        "gender": "Masculino",
-        "area": "INFRA",
-        "ufcg_year": 2016
+        "gender":"Masculino",
+        "area":"INFRA",
+        "ufcg_year":2016
     },
     {
-        "name": "Andresa Farias",
-        "room": "Volúpia",
-        "project": "Vtex Lab",
-        "graduation_level": "Graduação",
-        "lsd_year": [2024],
-        "born_year": 2002,
-        "gender": "Feminino",
-        "area": "INFRA",
-        "ufcg_year": 2022
-    },
-    {
-        "name": "Geraldo",
-        "room": "Volúpia",
-        "project": "Vtex Lab",
-        "graduation_level": "Graduação",
-        "lsd_year": [
-            2024
-        ],
-        "born_year": 2003,
-        "gender": "Masculino",
-        "area": "INFRA",
-        "ufcg_year": 2021
-    },
-    {
-        "name": "Julia Leal",
-        "room": "Volúpia",
-        "project": "Vtex Lab",
-        "graduation_level": "Graduação",
-        "lsd_year": [
-            2024
-        ],
-        "born_year": 2005,
-        "area": "INFRA",
-        "gender": "Feminino",
-        "ufcg_year": 2023
-    },
-    {
-        "name": "Oscar Brito",
-        "room": "Volúpia",
-        "project": "Vtex Lab",
-        "graduation_level": "Graduação",
-        "lsd_year": [2024],
-        "born_year": 2004,
-        "gender": "Masculino",
-        "area": "INFRA",
-        "ufcg_year": 2023
-    },
-    {
-        "name": "Renan Chaves",
+        "name":"Andresa Farias",
         "room":"Volúpia",
-        "project": "Vtex Lab",
-        "graduation_level": "Graduação",
-        "lsd_year": [2023],
-        "born_year": 2002,
-        "ufcg_year": 2021,
-        "area": "INFRA",
-        "gender": "Masculino"
+        "project":[
+            "Vtex Lab"
+        ],
+        "graduation_level":"Graduação",
+        "lsd_year":[
+            2024
+        ],
+        "gender":"Feminino",
+        "area":"INFRA",
+        "ufcg_year":2022
     },
     {
-        "name": "Bruno Grangeiro",
-        "room": "Volúpia",
-        "project": "Vtex Lab",
-        "graduation_level": "Graduação",
-        "lsd_year": [
+        "name":"Geraldo",
+        "room":"Volúpia",
+        "project":[
+            "Vtex Lab"
+        ],
+        "graduation_level":"Graduação",
+        "lsd_year":[
+            2024
+        ],
+        "gender":"Masculino",
+        "area":"INFRA",
+        "ufcg_year":2021
+    },
+    {
+        "name":"Julia Leal",
+        "room":"Volúpia",
+        "project":[
+            "Vtex Lab"
+        ],
+        "graduation_level":"Graduação",
+        "lsd_year":[
+            2024
+        ],
+        "area":"INFRA",
+        "gender":"Feminino",
+        "ufcg_year":2023
+    },
+    {
+        "name":"Oscar Brito",
+        "room":"Volúpia",
+        "project":[
+            "Vtex Lab"
+        ],
+        "graduation_level":"Graduação",
+        "lsd_year":[
+            2024
+        ],
+        "gender":"Masculino",
+        "area":"INFRA",
+        "ufcg_year":2023
+    },
+    {
+        "name":"Renan Chaves",
+        "room":"Volúpia",
+        "project":[
+            "Vtex Lab"
+        ],
+        "graduation_level":"Graduação",
+        "lsd_year":[
             2023
         ],
-        "born_year": 2001,
-        "gender": "Masculino",
-        "area": "INFRA",
-        "ufcg_year": 2020
+        "ufcg_year":2021,
+        "area":"INFRA",
+        "gender":"Masculino"
     },
     {
-        "name": "Caio Galvão",
-        "room": "Volúpia",
-        "project": "Vtex Lab",
-        "graduation_level": "Graduação",
-        "lsd_year": [
+        "name":"Bruno Grangeiro",
+        "room":"Volúpia",
+        "project":[
+            "Vtex Lab"
+        ],
+        "graduation_level":"Graduação",
+        "lsd_year":[
+            2023
+        ],
+        "gender":"Masculino",
+        "area":"INFRA",
+        "ufcg_year":2020
+    },
+    {
+        "name":"Caio Galvão",
+        "room":"Volúpia",
+        "project":[
+            "Vtex Lab"
+        ],
+        "graduation_level":"Graduação",
+        "lsd_year":[
             2022
         ],
-        "born_year": 2001,
-        "gender": "Masculino",
-        "area": "CLOUD",
-        "ufcg_year": 2020
+        "gender":"Masculino",
+        "area":"CLOUD",
+        "ufcg_year":2020
     },
     {
-        "name": "Pedro Serey",
-        "room": "Volúpia",
-        "project": "Vtex Lab",
-        "graduation_level": "Graduação",
-        "lsd_year": [
+        "name":"Pedro Serey",
+        "room":"Volúpia",
+        "project":[
+            "Vtex Lab"
+        ],
+        "graduation_level":"Graduação",
+        "lsd_year":[
             2022
         ],
-        "born_year": 2002,
-        "gender": "Masculino",
-        "area": "CLOUD",
-        "ufcg_year": 2020
+        "gender":"Masculino",
+        "area":"CLOUD",
+        "ufcg_year":2020
     },
     {
-        "name": "Ezequias",
-        "room": "Volúpia",
-        "project": "Vtex Lab",
-        "graduation_level": "Graduação",
-        "lsd_year": [
+        "name":"Ezequias",
+        "room":"Volúpia",
+        "project":[
+            "Vtex Lab"
+        ],
+        "graduation_level":"Graduação",
+        "lsd_year":[
             2022
         ],
-        "born_year": 2002,
-        "gender": "Masculino",
-        "area": "INFRA",
-        "ufcg_year": 2020
+        "gender":"Masculino",
+        "area":"INFRA",
+        "ufcg_year":2020
     },
     {
-        "name": "Ricardo Adley",
-        "room": "LMD - CN",
-        "project": "Dell AI Channels",
-        "graduation_level": "Graduação",
-        "lsd_year": [
+        "name":"Ricardo Adley",
+        "room":"LMD - CN",
+        "project":[
+            "Dell AI Channels"
+        ],
+        "graduation_level":"Graduação",
+        "lsd_year":[
             2020,
             2022,
             2024
         ],
-        "born_year": 1999,
-        "ufcg_year": 2019,
-        "area": "AI",
-        "gender": "Masculino"
+        "ufcg_year":2019,
+        "area":"AI",
+        "gender":"Masculino"
     },
     {
-        "name": "Doritos",
-        "room": "Rainha",
-        "project": "Vtex Lab",
-        "graduation_level": "Mestrado",
-        "lsd_year": [
+        "name":"Doritos",
+        "room":"Rainha",
+        "project":[
+            "Vtex Lab"
+        ],
+        "graduation_level":"Mestrado",
+        "lsd_year":[
             2018,
             2020
         ],
-        "born_year": 1998,
-        "gender": "Masculino",
-        "area": "Performace",
-        "ufcg_year": 2017
+        "gender":"Masculino",
+        "area":"Performance",
+        "ufcg_year":2017
     },
     {
-        "name": "Raisson Souto",
-        "room": "Matuta",
-        "project": "Scontain",
-        "graduation_level": "Graduação",
-        "lsd_year": [
+        "name":"Raisson Souto",
+        "room":"Matuta",
+        "project":[
+            "Scontain"
+        ],
+        "graduation_level":"Graduação",
+        "lsd_year":[
             2022
         ],
-        "born_year": 2001,
-        "area": "Segurança",
-        "gender": "Masculino",
-        "ufcg_year": 2019
+        "area":"Segurança",
+        "gender":"Masculino",
+        "ufcg_year":2019
     },
     {
-        "name": "Iriedson Souto",
-        "room": "Carvalheira",
-        "project": "IBM - LLM",
-        "graduation_level": "Mestrado",
-        "lsd_year": [
+        "name":"Iriedson Souto",
+        "room":"Carvalheira",
+        "project":[
+            "IBM - LLM"
+        ],
+        "graduation_level":"Mestrado",
+        "lsd_year":[
             2024
         ],
         "area":"AI",
-        "born_year": 1994,
-        "gender": "Masculino",
-        "ufcg_year": 2024,
-        "image": "https://iriedsonsouto.github.io/my-site/static/media/ucanbaby.449c78f936464f570557.png"
+        "gender":"Masculino",
+        "ufcg_year":2024,
+        "image":"https://iriedsonsouto.github.io/my-site/static/media/ucanbaby.449c78f936464f570557.png"
     },
     {
-        "name": "Lucas Pereira",
-        "room": "Carvalheira",
-        "area": "AI",
-        "born_year": 2002,
-        "lsd_year": [2024],
-        "ufcg_year": 2021,
-        "gender": "Masculino",
-        "graduation_level": "Graduação",
-        "project": "IBM - LLM"
+        "name":"Lucas Pereira",
+        "room":"Carvalheira",
+        "area":"AI",
+        "lsd_year":[
+            2024
+        ],
+        "ufcg_year":2021,
+        "gender":"Masculino",
+        "graduation_level":"Graduação",
+        "project":[
+            "IBM - LLM"
+        ]
     },
     {
-        "name": "Mateus Matias",
-        "room": "Carvalheira",
-        "area": "AI",
-        "born_year": 2001,
-        "lsd_year": [2021],
-        "ufcg_year": 2019,
-        "gender": "Masculino",
-        "graduation_level": "Graduação",
-        "project": "IBM - LLM"
+        "name":"Mateus Matias",
+        "room":"Carvalheira",
+        "area":"AI",
+        "lsd_year":[
+            2021
+        ],
+        "ufcg_year":2019,
+        "gender":"Masculino",
+        "graduation_level":"Graduação",
+        "project":[
+            "IBM - LLM"
+        ]
     },
     {
-        "name": "Ronaldd Matias",
-        "room": "Carvalheira",
-        "area": "AI",
-        "born_year": 2004,
-        "gender": "Masculino",
+        "name":"Ronaldd Matias",
+        "room":"Carvalheira",
+        "area":"AI",
+        "gender":"Masculino",
+        "graduation_level":"Graduação",
+        "lsd_year":[
+            2024
+        ],
+        "project":[
+            "IBM - LLM"
+        ],
+        "ufcg_year":2023
+    },
+    {
+        "name":"José Matheus",
+        "room":"Carvalheira",
+        "area":"AI",
+        "project":[
+            "IBM - LLM"
+        ],
+        "graduation_level":"Mestrado",
+        "lsd_year":[
+            2024
+        ],
+        "ufcg_year":2019,
+        "gender":"Masculino"
+    },
+    {
+        "name":"Thiago Emanuel (Manel)",
+        "room":"Bruxaxá",
+        "area":[
+            "Performance",
+            "CLOUD",
+            "INFRA"
+        ],
+        "project":[
+            "Vtex Lab",
+            "NuFuturo",
+            "Suporte"
+        ],
+        "graduation_level":"Doutorado",
+        "lsd_year":[
+            2005
+        ],
+        "ufcg_year":2003,
+        "gender":"Masculino"
+    },
+    {
+        "name":"Fabio Morais",
+        "room":"Caruçu",
+        "area":[
+            "IA",
+            "Performance"
+        ],
+        "project":[
+            "Vtex Lab",
+            "NuFuturo",
+            "IBM - LLM"
+        ],
+        "graduation_level":"Doutorado",
+        "lsd_year":[
+            2009
+        ],
+        "ufcg_year":2004,
+        "gender":"Masculino"
+    },
+    {
+        "ufcg_year": 2004,
+        "lsd_year": [2004],
+        "name": "Josicleide Soares",
+        "room": "Hall",
+        "gender": "Feminino",
         "graduation_level": "Graduação",
-        "lsd_year": [2024],
-        "project": "IBM - LLM",
-        "ufcg_year": 2023
+        "area": [ "Secretariado "],
+        "project": [ "None" ]
+    },
+    {
+        "ufcg_year": 1989,
+        "lsd_year": [1996],
+        "project": [ "Vtex Lab", "Eureka"],
+        "area": [ "Performance", "CLOUD", "INFRA"],
+        "gender":"Masculino",
+        "graduation_level": "Doutorado",
+        "name": "Francisco Brasileiro (Fubica)",
+        "room": "Bruxaxá"
     }
 ]

@@ -1,14 +1,14 @@
+
 type Member = {
+
     name: string;
     room: string;
-    project: string;
-    gender: string;
+    project: string[];
     graduation_level: string;
     lsd_year: number[];
-    born_year: number;
-    area: string;
+    area: string | string[];
+    gender: string;
     ufcg_year: number;
-};
-
+}
 
 export type { Member };

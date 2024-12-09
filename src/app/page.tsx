@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import data from './data/data.json';
 import { Member } from '@/types/member';
-import { formatGuessYear, getDailyMember } from '@/utils/utils';
+import { formatGuess, getDailyMember } from '@/utils/utils';
 
 export default function Home() {
   const members: Member[] = data;
@@ -26,7 +26,6 @@ export default function Home() {
     ['Graduação', 'graduation_level'],
     ['Atuação', 'area'],
     ['Entrou LSD', 'lsd_year'],
-    ['Nascimento', 'born_year'],
     ['Entrou na UFCG', 'ufcg_year']
   ]
 
@@ -76,7 +75,7 @@ export default function Home() {
     console.log('guesses', guesses);
   };
 
-  function handleGuessColor(guess: string | number | number[], field: keyof Member) {
+  function handleGuessColor(guess: string | number | number[] | string[], field: keyof Member) {
     if (!dailyMember) return 'bg-[#de576581]';
     if (guess.toString() === dailyMember[field].toString()) {
       return 'bg-[#52bebc7d]';
@@ -192,7 +191,7 @@ export default function Home() {
         </div>
 
         {guesses.length > 0 && (
-        <div className="mt-12 mx-auto px-4">
+        <div className="mt-12 mx-auto px-4 sm:overflow-x-auto">
           <table className="table-auto w-full border-collapse border border-gray-200">
             <thead>
               <tr className="bg-gray-100">
@@ -211,7 +210,7 @@ export default function Home() {
                       key={colIndex}
                       className={`text-lg text-gray-800 text-center border border-gray-300 px-4 py-2 ${handleGuessColor(guess[field[1]], field[1])}`}
                     >
-                      {formatGuessYear(guess[field[1]], field[1], dailyMember)}
+                      {formatGuess(guess[field[1]], field[1], dailyMember)}
                     </td>
                   
                   ))}
