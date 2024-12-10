@@ -74,26 +74,40 @@ export default function Home() {
     }
   };
 
-  function handleGuessColor(guess: string | number | number[] | string[], field: keyof Member) {
+  function handleGuessColor(guess: Member, field: keyof Member): string {
     if (!dailyMember) return 'bg-[#de576581]';
-    if (guess.toString() === dailyMember[field].toString()) {
-      return 'bg-[#52bebc7d]';
-    } else if (dailyMember[field].toString().includes(guess.toString()) || guess.toString().includes(dailyMember[field].toString())) {
-      return 'bg-[#dd935678]';
-    } else {
-      return 'bg-[#de576581]';
+
+    console.log(guess, dailyMember);
+    const guessValue = guess[field];
+    const dailyValue = dailyMember[field];
+    const guessArray = Array.isArray(guessValue) ? guessValue : [guessValue];
+    const dailyArray = Array.isArray(dailyValue) ? dailyValue : [dailyValue];
+
+    console.log(guessArray, dailyArray);
+    console.log(guessArray.toString(), dailyArray.toString());
+    if (guessArray.toString() === dailyArray.toString()) {
+        return 'bg-[#52bebc7d]';
     }
+
+    if (
+        guessArray.some(item => dailyArray.includes(item)) ||
+        dailyArray.some(item => guessArray.includes(item))
+    ) {
+        return 'bg-[#dd935678]';
+    }
+    return 'bg-[#de576581]';
   }
+
 
   useEffect(() => {
     setMembers(data);
     setDailyMember(getDailyMember(members));
-
     const lastMember = localStorage.getItem('last_member');
-    if (lastMember) {
+  
+    if (lastMember && JSON.parse(lastMember) === JSON.stringify(dailyMember)) {
       setGuessed(true);
       setGuesses(JSON.parse(localStorage.getItem('last_guesses') || '[]'));
-    }
+    } 
 
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -103,7 +117,7 @@ export default function Home() {
         !inputRef.current.contains(event.target as Node)
       ) {
         setIsDropdownOpen(false);
-      }
+      } 
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
@@ -216,7 +230,7 @@ export default function Home() {
                         <td
                           key={colIndex}
                           className={`text-lg text-gray-800 text-center border border-gray-200 px-4 py-2 ${handleGuessColor(
-                            guess[field[1]],
+                            guess,
                             field[1]
                           )}
                           `}

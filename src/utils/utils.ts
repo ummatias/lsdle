@@ -42,7 +42,7 @@ const formatGuess = (
   };
 
   if (Array.isArray(guess) && typeof guess[0] === 'number') {
-    return formatYearGuess(guess[0], dailyValue as number[]);
+    return guess.map((year) => formatYearGuess(year as number, dailyValue as number[])).join(', ');
   }
 
   if (Array.isArray(guess) && typeof guess[0] === 'string') {
