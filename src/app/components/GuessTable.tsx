@@ -32,7 +32,7 @@ const GuessingTable: FC<GuessingTableProps> = ({ dailyMember, guesses }) => {
                 </tr>
                 </thead>
             </table>
-            <div className="max-h-[16rem] overflow-y-auto">
+            <div className="max-h-[8rem] overflow-y-auto">
                 <table className="table-auto w-full border-collapse">
                 <tbody>
                     {dailyMember &&
