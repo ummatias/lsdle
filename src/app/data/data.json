@@ -436,5 +436,145 @@
         "project": [ "Dell AI Channels", "IBM - LLM"],
         "room": "Carvalheira",
         "ufcg_year": 2016
+    },
+    {
+        "name": "Paola Moura",
+        "room": "Serra Limpa",
+        "area":["DevOps"],
+        "gender":"Feminino",
+        "graduation_level":"Graduação",
+        "lsd_year":[
+            2024
+        ],
+        "project":[
+            "Suporte"
+        ],
+        "ufcg_year":2021
+    },
+    {
+        "name": "Igor Kadson",
+        "room": "Serra Limpa",
+        "area":["DevOps"],
+        "gender":"Masculino",
+        "graduation_level":"Graduação",
+        "lsd_year":[
+            2022
+        ],
+        "project":[
+            "Suporte"
+        ],
+        "ufcg_year":2018
+    },
+    {
+        "name": "Isaac Vicente",
+        "room": "Serra Limpa",
+        "area":["DevOps"],
+        "gender":"Masculino",
+        "graduation_level":"Graduação",
+        "lsd_year":[
+            2023
+        ],
+        "project":[
+            "Suporte"
+        ],
+        "ufcg_year":2022
+    },
+    {
+        "name": "Alex",
+        "room": "Serra Limpa",
+        "area":["DevOps"],
+        "gender":"Masculino",
+        "graduation_level":"Graduação",
+        "lsd_year":[
+            2023
+        ],
+        "project":[
+            "Suporte"
+        ],
+        "ufcg_year":2023
+    },
+    {
+        "name": "Winicius Allan",
+        "room": "Serra Limpa",
+        "area":["DevOps"],
+        "gender":"Masculino",
+        "graduation_level":"Graduação",
+        "lsd_year":[
+            2023
+        ],
+        "project":[
+            "Suporte"
+        ],
+        "ufcg_year":2022
+    },
+    {
+        "name": "Júlio Alcantara",
+        "room": "Serra Limpa",
+        "area":["DevOps"],
+        "gender":"Masculino",
+        "graduation_level":"Graduação",
+        "lsd_year":[
+            2023
+        ],
+        "project":[
+            "Suporte"
+        ],
+        "ufcg_year":2022
+    },
+    {
+        "name": "Francisco Filho",
+        "room": "Serra Limpa",
+        "area":["DevOps"],
+        "gender":"Masculino",
+        "graduation_level":"Graduação",
+        "lsd_year":[
+            2024
+        ],
+        "project":[
+            "Suporte"
+        ],
+        "ufcg_year":2022
+    },
+    {
+        "name": "Mariane Zeitouni",
+        "room": "Serra Limpa",
+        "area":["DevOps"],
+        "gender":"Feminino",
+        "graduation_level":"Mestrado",
+        "lsd_year":[
+            2024
+        ],
+        "project":[
+            "Suporte"
+        ],
+        "ufcg_year":2020
+    },
+    {
+        "name": "Adriano Araújo",
+        "room": "Serra Limpa",
+        "area":["DevOps", "SRE"],
+        "gender":"Masculino",
+        "graduation_level":"Mestrado",
+        "lsd_year":[
+            2021
+        ],
+        "project":[
+            "Suporte"
+        ],
+        "ufcg_year":2018
+    },
+    {
+        "name": "Ednaldo Junior",
+        "room": "Serra Limpa",
+        "area":["Redes"],
+        "gender":"Masculino",
+        "graduation_level":"Graduação",
+        "lsd_year":[
+            2024
+        ],
+        "project":[
+            "Suporte"
+        ],
+        "ufcg_year":2024
     }
 ]
