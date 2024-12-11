@@ -60,7 +60,8 @@ const GuessingGame = () => {
   const getHoverColor = (index: number) => COLORS[index % COLORS.length];
 
   return (
-    <>
+    <div>
+
       {!guessed && (
         <Box
           title="Bem-vindo ao LSDLE"
@@ -94,7 +95,7 @@ const GuessingGame = () => {
       {guesses.length > 0 && (
         <GuessingTable guesses={guesses} dailyMember={dailyMember} />
       )}
-    </>
+    </div>
   );
 };
 
