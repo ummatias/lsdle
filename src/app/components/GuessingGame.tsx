@@ -6,6 +6,7 @@ import { useMembersContext } from '@/app/contexts/MembersContext';
 import { Member } from '@/app/types/member';
 import { COLORS } from '@/app/utils/constants';
 import Box from './Box';
+import { removeAccents } from '@/app/utils/utils';
 
 const GuessingGame = () => {
   const { members, guesses, guessed, dailyMember, handleGuess, loading } = useMembersContext();
@@ -18,9 +19,11 @@ const GuessingGame = () => {
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
+    const normalizedValue = removeAccents(value);
+
     setSearchQuery(value);
     const newFilteredMembers = members.filter((member) =>
-      member.name.toLowerCase().includes(value.toLowerCase())
+      removeAccents(member.name).toLowerCase().includes(normalizedValue.toLowerCase())
     );
     setFilteredMembers(newFilteredMembers);
     setIsDropdownOpen(newFilteredMembers.length > 0);

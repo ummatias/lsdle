@@ -1,6 +1,6 @@
 import { Member } from "../types/member";
 import { FIELDS } from "../utils/constants"
-import { formatGuess,handleGuessColor } from "../utils/utils"
+import { formatGuess, handleGuessColor } from "@/app/utils/utils";
 import { FC } from "react";
 
 interface GuessingTableProps {

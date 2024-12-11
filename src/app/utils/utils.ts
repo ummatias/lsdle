@@ -82,6 +82,8 @@ function handleGuessColor(
   return 'bg-[#de576581]';
 }
 
+const removeAccents = (str: string): string => {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+};
 
-
-export { getDailyMember, formatGuess, handleGuessColor };
+export { getDailyMember, formatGuess, handleGuessColor, removeAccents };
