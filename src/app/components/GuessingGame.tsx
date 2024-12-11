@@ -35,7 +35,6 @@ const GuessingGame = () => {
     setIsDropdownOpen(false);
   };
 
-  // Close the dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
