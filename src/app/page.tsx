@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import data from './data/data.json';
 import { Member } from '@/types/member';
-import { formatGuess, getDailyMember } from '@/utils/utils';
+import { formatGuess, getDailyMember, removeAccents } from '@/utils/utils';
 
 export default function Home() {
 
@@ -43,10 +43,13 @@ export default function Home() {
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
+    const normalizedValue = removeAccents(value);
+
     setSearchQuery(value);
+
     setFilteredMembers(
       members.filter((member) =>
-        member.name.toLowerCase().includes(value.toLowerCase())
+        removeAccents(member.name).toLowerCase().includes(normalizedValue.toLowerCase())
       )
     );
     setIsDropdownOpen(value.length > 0 && filteredMembers.length > 0);

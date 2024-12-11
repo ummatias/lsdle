@@ -62,6 +62,10 @@ const formatGuess = (
   throw new Error('Invalid guess or field for the provided Member type.');
 };
 
+const removeAccents = (str: string): string => {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+};
 
 
-export { getDailyMember, formatGuess };
+
+export { getDailyMember, formatGuess, removeAccents };
