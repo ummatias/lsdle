@@ -62,8 +62,8 @@ const formatGuess = (
         return guessField > dailyMemberField
             ? `${guessField} ⬇`
             : guessField < dailyMemberField
-              ? `${guessField} ⬆`
-              : `${guessField}`;
+            ? `${guessField} ⬆`
+            : `${guessField}`;
     }
 
     // If no valid case matches
@@ -98,4 +98,4 @@ const removeAccents = (str: string): string => {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 };
 
-export { getDailyMember, formatGuess, handleGuessColor, removeAccents };
+export { hashString, getDailyMember, formatGuess, handleGuessColor, removeAccents };

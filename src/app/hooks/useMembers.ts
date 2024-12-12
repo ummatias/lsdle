@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getLocalStorage, setLocalStorage } from "@/app/utils/localStorage";
 import data from "../data/data.json";
-import { getDailyMember } from "@/app/utils/utils";
+import { getDailyMember, hashString } from "@/app/utils/utils";
 import { Member } from "@/app/types/member";
 
 export const useMembers = () => {
@@ -17,9 +17,9 @@ export const useMembers = () => {
         setDailyMember(daily);
 
         const lastGuesses = getLocalStorage<Member[]>("last_guesses", []);
-        const lastMember = getLocalStorage<Member>("last_member", {} as Member);
+        const lsd_seed = getLocalStorage<number>("lsd_seed", 0);
 
-        if (lastMember && lastMember.name === daily.name) {
+        if (lsd_seed === hashString(Date.now().toString())) {
             setGuessed(true);
             setGuesses(lastGuesses || []);
         }
@@ -32,10 +32,7 @@ export const useMembers = () => {
 
         if (member.name === dailyMember?.name) {
             setGuessed(true);
-            const points = getLocalStorage<number>("lsd_points", 0) + 1;
-
-            setLocalStorage("lsd_points", points);
-            setLocalStorage("last_member", member);
+            setLocalStorage("lsd_seed", hashString(Date.now().toString()));
             setLocalStorage("last_guesses", guesses);
         }
     };
