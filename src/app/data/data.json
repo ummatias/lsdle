@@ -671,5 +671,25 @@
         ],
         "room": "Serra Limpa",
         "ufcg_year": 2024
+    },
+    {
+        "area": [
+            "AI",
+            "Engenharia de Software"
+        ],
+        "gender": "Masculino",
+        "graduation_level": "Doutorado",
+        "lsd_year": [
+            2021
+        ],
+        "name": "João Arthur",
+        "project": [
+            "NuFuturo",
+            "IBM - LLM",
+            "IBM - 5G",
+            "Dell AI Channels"
+        ],
+        "room": "NuFuturo",
+        "ufcg_year": 2003
     }
 ]
