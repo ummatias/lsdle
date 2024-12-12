@@ -1,6 +1,4 @@
-
 type Member = {
-
     name: string;
     room: string;
     project: string[];
@@ -9,6 +7,6 @@ type Member = {
     area: string[];
     gender: string;
     ufcg_year: number;
-}
+};
 
 export type { Member };
