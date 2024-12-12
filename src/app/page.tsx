@@ -12,7 +12,9 @@ export default function Home() {
                     <Image
                         src="/lsd-logo.png"
                         alt="logo"
-                        className="h-32 mx-auto mb-8"
+                        width={300}
+                        height={100}
+                        className="mx-auto mb-8"
                     />
                     <GuessingGame />
                 </main>

@@ -11,7 +11,7 @@ interface GuessingTableProps {
 const GuessingTable: FC<GuessingTableProps> = ({ dailyMember, guesses }) => {
     return (
         <div
-            className="w-[96rem] h-[16rem] mx-auto mt-8 border border-gray-200 overflow-x-auto"
+            className="w-[80%] h-[16rem] mx-auto mt-8"
             style={{
                 scrollbarColor: "#4A4A4A #F3F4F6",
                 scrollbarWidth: "thin",
