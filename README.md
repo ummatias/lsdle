@@ -19,13 +19,13 @@ To add your information to the game, you need to edit the `src/app/data/data.jso
 
 ```json
 {
-    "name": "Member Name",
-    "room": "The room where the member is located",
-    "project": "The projects the member is involved in, as [project1, project2]",
+    "area": "The area you work in, list as [ area1, area2]",
     "gender": "Your gender",
     "graduation_level": "Your graduation level",
     "lsd_year": "The year you joined LSD; if there is more than one year, list them as [year1, year2]",
-    "area": "The area you work in, list as [ area1, area2]",
+    "name": "Member Name",
+    "project":  "The projects the member is involved in, as [project1, project2]",
+    "room": "Serra Limpa",
     "ufcg_year": "The year you joined UFCG"
 }
 ```
