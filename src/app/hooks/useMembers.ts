@@ -19,9 +19,10 @@ export const useMembers = () => {
         const lastGuesses = getLocalStorage<Member[]>("last_guesses", []);
         const lsd_seed = getLocalStorage<number>("lsd_seed", 0);
 
-        if (lsd_seed === hashString(Date.now().toString())) {
-            setGuessed(true);
+        const today = new Date().toISOString().split("T")[0]
+        if (lsd_seed === hashString(today)) {
             setGuesses(lastGuesses || []);
+            setGuessed(getLocalStorage<boolean>("guessed", false));
         }
         setLoading(false);
     }, []);
@@ -32,9 +33,10 @@ export const useMembers = () => {
 
         if (member.name === dailyMember?.name) {
             setGuessed(true);
-            setLocalStorage("lsd_seed", hashString(Date.now().toString()));
-            setLocalStorage("last_guesses", guesses);
+            setLocalStorage("guessed", true);
         }
+        setLocalStorage("lsd_seed", hashString(new Date().toISOString().split("T")[0]));
+        setLocalStorage("last_guesses", [member, ...guesses]);
     };
 
     return { members, dailyMember, guesses, guessed, handleGuess, loading };
