@@ -691,5 +691,101 @@
         ],
         "room": "NuFuturo",
         "ufcg_year": 2003
+    },
+    {
+        "area": [
+            "Segurança"
+        ],
+        "gender": "Masculino",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2023
+        ],
+        "name": "Carlos Pamplona",
+        "project": [
+            "SSIP"
+        ],
+        "room": "Matuta",
+        "ufcg_year": 2020
+    },
+    {
+        "area": [
+            "Segurança"
+        ],
+        "gender": "Masculino",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2023
+        ],
+        "name": "Raniel Dourado",
+        "project": [
+            "SSIP"
+        ],
+        "room": "Matuta",
+        "ufcg_year": 2021
+    },
+    {
+        "area": [
+            "Segurança"
+        ],
+        "gender": "Feminino",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2023
+        ],
+        "name": "Sabrina Barbosa",
+        "project": [
+            "SSIP"
+        ],
+        "room": "Matuta",
+        "ufcg_year": 2021
+    },
+    {
+        "area": [
+            "Segurança"
+        ],
+        "gender": "Masculino",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2021
+        ],
+        "name": "Anderson Melo",
+        "project": [
+            "SSIP"
+        ],
+        "room": "Matuta",
+        "ufcg_year": 2019
+    },
+    {
+        "area": [
+            "Segurança"
+        ],
+        "gender": "Masculino",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2021
+        ],
+        "name": "Fernando Marques",
+        "project": [
+            "SSIP"
+        ],
+        "room": "Matuta",
+        "ufcg_year": 2019
+    },
+    {
+        "area": [
+            "Segurança"
+        ],
+        "gender": "Masculino",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2021
+        ],
+        "name": "Davi Pontes",
+        "project": [
+            "SSIP"
+        ],
+        "room": "Matuta",
+        "ufcg_year": 2019
     }
 ]
