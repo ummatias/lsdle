@@ -771,5 +771,21 @@
         ],
         "room": "Matuta",
         "ufcg_year": 2019
+    },
+    {
+        "area": [
+            "Segurança"
+        ],
+        "gender": "Masculino",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2021
+        ],
+        "name": "Davi Pontes",
+        "project": [
+            "SSIP"
+        ],
+        "room": "Matuta",
+        "ufcg_year": 2019
     }
 ]
