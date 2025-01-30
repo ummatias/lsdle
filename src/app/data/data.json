@@ -787,5 +787,21 @@
         ],
         "room": "Matuta",
         "ufcg_year": 2019
+    },
+    {
+        "area": [
+            "AI"
+        ],
+        "gender": "Masculino",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2024
+        ],
+        "name": "André Alves",
+        "project": [
+            "IBM - LLM"
+        ],
+        "room": "Carvalheira",
+        "ufcg_year": 2021
     }
 ]
