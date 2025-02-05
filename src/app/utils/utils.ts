@@ -6,15 +6,41 @@ function hashString(str: string): number {
         hash = (hash << 5) - hash + str.charCodeAt(i);
         hash |= 0;
     }
-    return hash;
+    return Math.abs(hash);
+}
+
+function seededRandom(seed: number): () => number {
+    return () => {
+        seed = (seed * 9301 + 49297) % 233280;
+        return seed / 233280;
+    };
+}
+
+function shuffle<T>(array: T[], seed: number): T[] {
+    const random = seededRandom(seed);
+    const shuffled = [...array];
+
+    // Fisher-Yates
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+
+    return shuffled;
 }
 
 function getDailyMember(members: Member[]): Member {
     const today = new Date().toISOString().split("T")[0];
     const seed = hashString(today);
-    const index = Math.abs(seed) % members.length;
-    return members[index];
+    const shuffledMembers = shuffle(members, seed);
+
+    console.log("Seed:", seed);
+    console.log("Shuffled Order:", shuffledMembers);
+    console.log("Daily Member:", shuffledMembers[0]);
+
+    return shuffledMembers[0];
 }
+
 
 const formatGuess = (
     guessField: string | number | number[] | string[],
@@ -54,7 +80,6 @@ const formatGuess = (
         return guessField.join(", ");
     }
 
-    // If guess is a number, compare with daily value
     if (
         typeof guessField === "number" &&
         typeof dailyMemberField === "number"
@@ -66,7 +91,6 @@ const formatGuess = (
             : `${guessField}`;
     }
 
-    // If no valid case matches
     throw new Error("Invalid guess or field for the provided Member type.");
 };
 
