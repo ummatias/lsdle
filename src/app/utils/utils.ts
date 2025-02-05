@@ -33,11 +33,6 @@ function getDailyMember(members: Member[]): Member {
     const today = new Date().toISOString().split("T")[0];
     const seed = hashString(today);
     const shuffledMembers = shuffle(members, seed);
-
-    console.log("Seed:", seed);
-    console.log("Shuffled Order:", shuffledMembers);
-    console.log("Daily Member:", shuffledMembers[0]);
-
     return shuffledMembers[0];
 }
 
@@ -103,8 +98,6 @@ function handleGuessColor(
         ? dailyMemberField
         : [dailyMemberField];
 
-    console.log(guessArray, dailyArray);
-    console.log(guessArray.toString(), dailyArray.toString());
     if (guessArray.toString() === dailyArray.toString()) {
         return "bg-[#52bebc7d]";
     }
