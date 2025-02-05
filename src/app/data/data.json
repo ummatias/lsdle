@@ -329,6 +329,22 @@
             "AI"
         ],
         "gender": "Masculino",
+        "graduation_level": "Mestrado",
+        "lsd_year": [
+            2021
+        ],
+        "name": "Caio Davi",
+        "project": [
+            "IBM - LLM"
+        ],
+        "room": "Carvalheira",
+        "ufcg_year": 2016
+    },
+    {
+        "area": [
+            "AI"
+        ],
+        "gender": "Masculino",
         "graduation_level": "Graduação",
         "lsd_year": [
             2024
