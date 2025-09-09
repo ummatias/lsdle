@@ -641,7 +641,7 @@
     },
     {
         "area": [
-            "DevOps"
+            "INFRA"
         ],
         "gender": "Feminino",
         "graduation_level": "Mestrado",
@@ -650,9 +650,9 @@
         ],
         "name": "Mariane Zeitouni",
         "project": [
-            "Suporte"
+            "Vtex Lab"
         ],
-        "room": "Serra Limpa",
+        "room": "Rainha",
         "ufcg_year": 2020
     },
     {
@@ -819,5 +819,53 @@
         ],
         "room": "Carvalheira",
         "ufcg_year": 2021
+    },
+    {
+        "area": [
+            "IA"
+        ],
+        "gender": "Feminino",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2025
+        ],
+        "name": "Maria Luiza Cavalcanti",
+        "project": [
+            "Vtex Lab"
+        ],
+        "room": "Volúpia",
+        "ufcg_year": 2023
+    },
+    {
+        "area": [
+            "IA"
+        ],
+        "gender": "Feminino",
+        "graduation_level": "Graduação",
+        "lsd_year": [
+            2025
+        ],
+        "name": "Bruna Letícia",
+        "project": [
+            "Vtex Lab"
+        ],
+        "room": "Volúpia",
+        "ufcg_year": 2023
+    },
+    {
+        "area": [
+            "DevOps"
+        ],
+        "gender": "Feminino",
+        "graduation_level": "Doutorado",
+        "lsd_year": [
+            2025
+        ],
+        "name": "Mariana Mendes",
+        "project": [
+            "Vtex Lab"
+        ],
+        "room": "Volúpia",
+        "ufcg_year": 2015
     }
 ]
