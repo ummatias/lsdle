@@ -341,6 +341,17 @@
         "ufcg_year": 2016
     },
     {
+        "area": [ "Recursos Humanos" ],
+        "gender": "Masculino",
+        "graduation_level": "PhD",
+        "lsd_year": [
+            2024
+        ],
+        "name": "Obama",
+        "project": "IBM - LLM",
+        "ufcg_year": 2024
+    },
+    {
         "area": [
             "AI"
         ],
