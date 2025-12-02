@@ -72,7 +72,7 @@
             "AI"
         ],
         "room":"Colabs",
-        "project":"IBM - Agents",
+        "project": [ "IBM - Agents" ],
         "ufcg_year": 2009,
         "lsd_year": 2012
     },
@@ -360,7 +360,7 @@
             2024
         ],
         "name": "Obama",
-        "project": "IBM - LLM",
+        "project": [ "IBM - LLM" ],
         "ufcg_year": 2024
     },
     {
