@@ -74,7 +74,7 @@
         "room":"Colabs",
         "project": [ "IBM - Agents" ],
         "ufcg_year": 2009,
-        "lsd_year": 2012
+        "lsd_year": [2012]
     },
     {
         "area": [
@@ -361,7 +361,8 @@
         ],
         "name": "Obama",
         "project": [ "IBM - LLM" ],
-        "ufcg_year": [ 2024 ]
+        "ufcg_year": 2024,
+        "room": "Colabs"
     },
     {
         "area": [
@@ -845,7 +846,7 @@
     },
     {
         "area": [
-            "IA"
+            "AI"
         ],
         "gender": "Feminino",
         "graduation_level": "Graduação",
@@ -861,7 +862,7 @@
     },
     {
         "area": [
-            "IA"
+            "AI"
         ],
         "gender": "Feminino",
         "graduation_level": "Graduação",
