@@ -59,10 +59,22 @@
         ],
         "name": "Moab Alves",
         "project": [
-            "Vtex Lab"
+            "IBM - Agents"
         ],
-        "room": "Rainha",
+        "room": "Colabs",
         "ufcg_year": 2022
+    },
+    {
+        "name": "Talita",
+        "graduation_level": "Doutorado",
+        "gender": "Feminino",
+        "area": [
+            "AI"
+        ],
+        "room":"Colabs",
+        "project":"IBM - LLM",
+        "ufcg_year": 2009,
+        "lsd_year": 2012
     },
     {
         "area": [
@@ -321,7 +333,7 @@
         "project": [
             "IBM - LLM"
         ],
-        "room": "Carvalheira",
+        "room": "Colabs",
         "ufcg_year": 2024
     },
     {
@@ -337,7 +349,7 @@
         "project": [
             "IBM - LLM"
         ],
-        "room": "Carvalheira",
+        "room": "Colabs",
         "ufcg_year": 2016
     },
     {
@@ -364,7 +376,7 @@
         "project": [
             "IBM - LLM"
         ],
-        "room": "Carvalheira",
+        "room": "Colabs",
         "ufcg_year": 2021
     },
     {
@@ -380,7 +392,7 @@
         "project": [
             "IBM - LLM"
         ],
-        "room": "Carvalheira",
+        "room": "Colabs",
         "ufcg_year": 2019
     },
     {
@@ -396,7 +408,7 @@
         "project": [
             "IBM - LLM"
         ],
-        "room": "Carvalheira",
+        "room": "Colabs",
         "ufcg_year": 2023
     },
     {
@@ -412,7 +424,7 @@
         "project": [
             "IBM - LLM"
         ],
-        "room": "Carvalheira",
+        "room": "Colabs",
         "ufcg_year": 2019
     },
     {
@@ -535,7 +547,7 @@
             "Dell AI Channels",
             "IBM - LLM"
         ],
-        "room": "Carvalheira",
+        "room": "Colabs",
         "ufcg_year": 2016
     },
     {
@@ -828,7 +840,7 @@
         "project": [
             "IBM - LLM"
         ],
-        "room": "Carvalheira",
+        "room": "Colabs",
         "ufcg_year": 2021
     },
     {
