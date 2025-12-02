@@ -361,7 +361,7 @@
         ],
         "name": "Obama",
         "project": [ "IBM - LLM" ],
-        "ufcg_year": 2024
+        "ufcg_year": [ 2024 ]
     },
     {
         "area": [
