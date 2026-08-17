@@ -14,6 +14,7 @@ const GuessingGame = () => {
     const [searchQuery, setSearchQuery] = useState("");
     const [filteredMembers, setFilteredMembers] = useState<Member[]>([]);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [highlightedIndex, setHighlightedIndex] = useState(-1);
 
     const inputRef = useRef<HTMLInputElement | null>(null);
     const dropdownRef = useRef<HTMLDivElement | null>(null);
@@ -30,12 +31,48 @@ const GuessingGame = () => {
         );
         setFilteredMembers(newFilteredMembers);
         setIsDropdownOpen(newFilteredMembers.length > 0);
+        setHighlightedIndex(-1);
     };
 
     const handleOptionClick = (member: Member) => {
         handleGuess(member);
         setSearchQuery("");
         setIsDropdownOpen(false);
+        setHighlightedIndex(-1);
+    };
+
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+        if (!isDropdownOpen || filteredMembers.length === 0) {
+            return;
+        }
+
+        switch (event.key) {
+            case "ArrowDown":
+                event.preventDefault();
+                setHighlightedIndex((prev) =>
+                    prev < filteredMembers.length - 1 ? prev + 1 : 0,
+                );
+                break;
+            case "ArrowUp":
+                event.preventDefault();
+                setHighlightedIndex((prev) =>
+                    prev > 0 ? prev - 1 : filteredMembers.length - 1,
+                );
+                break;
+            case "Enter":
+                event.preventDefault();
+                if (highlightedIndex >= 0) {
+                    handleOptionClick(filteredMembers[highlightedIndex]);
+                }
+                break;
+            case "Escape":
+                event.preventDefault();
+                setIsDropdownOpen(false);
+                setHighlightedIndex(-1);
+                break;
+            default:
+                break;
+        }
     };
 
     useEffect(() => {
@@ -71,6 +108,7 @@ const GuessingGame = () => {
                 >
                     <InputField
                         onChange={handleSearchChange}
+                        onKeyDown={handleKeyDown}
                         value={searchQuery}
                         inputRef={inputRef}
                         placeholder="Digite o nome do membro"
@@ -81,6 +119,7 @@ const GuessingGame = () => {
                                 items={filteredMembers}
                                 onSelect={handleOptionClick}
                                 hoverColor={getHoverColor}
+                                highlightedIndex={highlightedIndex}
                             />
                         </div>
                     )}

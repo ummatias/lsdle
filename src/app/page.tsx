@@ -8,13 +8,13 @@ export default function Home() {
     return (
         <MembersProvider>
             <div className="h-screen flex flex-col bg-gray-100">
-                <main className="flex flex-col justify-center bg-gray-100 flex-grow overflow-hidden">
+                <main className="flex flex-col justify-center bg-gray-100 flex-grow overflow-y-auto px-4">
                     <Image
                         src="/lsd-logo.png"
                         alt="logo"
                         width={300}
                         height={100}
-                        className="mx-auto mb-8"
+                        className="mx-auto mb-8 h-auto w-full max-w-[300px]"
                     />
                     <GuessingGame />
                 </main>

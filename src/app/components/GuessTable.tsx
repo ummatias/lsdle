@@ -11,13 +11,13 @@ interface GuessingTableProps {
 const GuessingTable: FC<GuessingTableProps> = ({ dailyMember, guesses }) => {
     return (
         <div
-            className="w-[80%] h-[16rem] mx-auto mt-8"
+            className="w-full sm:w-[90%] lg:w-[80%] h-[16rem] mx-auto mt-8 px-4 overflow-auto rounded-xl bg-white shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)]"
             style={{
                 scrollbarColor: "#4A4A4A #F3F4F6",
                 scrollbarWidth: "thin",
             }}
         >
-            <table className="table-fixed w-full border-collapse">
+            <table className="table-fixed w-full min-w-[48rem] border-separate border-spacing-0">
                 <colgroup>
                     {FIELDS.map((_, index) => (
                         <col
@@ -27,41 +27,48 @@ const GuessingTable: FC<GuessingTableProps> = ({ dailyMember, guesses }) => {
                     ))}
                 </colgroup>
                 <thead>
-                    <tr className="sticky top-0 z-9 bg-gray-100">
+                    <tr className="sticky top-0 z-[1]">
                         {FIELDS.map((field, index) => (
                             <th
                                 key={index}
-                                className="text-lg font-semibold text-gray-800 border border-gray-200 px-4 py-2"
+                                className="text-sm md:text-base font-semibold text-gray-600 tracking-wide px-4 py-3 bg-white/95 backdrop-blur-sm border-b border-gray-100"
                             >
                                 {field[0]}
                             </th>
                         ))}
                     </tr>
                 </thead>
-                <tbody className="overflow-y-auto border border-gray-200">
+                <tbody>
                     {dailyMember &&
-                        guesses.map((guess, rowIndex) => (
+                        guesses.map((guess) => (
                             <tr
-                                key={rowIndex}
-                                className="border border-gray-200"
+                                key={guess.name}
+                                className="group animate-fadeInUp"
                             >
                                 {FIELDS.map((field, colIndex) => (
                                     <td
                                         key={colIndex}
-                                        className={`text-lg text-gray-800 text-center border border-gray-200 px-4 py-2 ${handleGuessColor(
-                                            guess[field[1]],
-                                            dailyMember[
-                                                field[1] as keyof typeof dailyMember
-                                            ],
-                                        )}`}
+                                        className="text-center px-2 py-2 border-b border-gray-50"
                                     >
-                                        {formatGuess(
-                                            guess[field[1]],
-                                            dailyMember[
-                                                field[1] as keyof typeof dailyMember
-                                            ],
-                                            field[1],
-                                        )}
+                                        <span
+                                            className={`animate-flipIn origin-top inline-block w-full rounded-lg px-3 py-2 text-sm md:text-base font-medium shadow-[0.2rem_0.2rem_0.4rem_0_rgb(225,226,228),-0.15rem_-0.15rem_0.3rem_0_rgb(255,255,255)] transition-transform duration-200 group-hover:-translate-y-0.5 ${handleGuessColor(
+                                                guess[field[1]],
+                                                dailyMember[
+                                                    field[1] as keyof typeof dailyMember
+                                                ],
+                                            )}`}
+                                            style={{
+                                                animationDelay: `${colIndex * 120}ms`,
+                                            }}
+                                        >
+                                            {formatGuess(
+                                                guess[field[1]],
+                                                dailyMember[
+                                                    field[1] as keyof typeof dailyMember
+                                                ],
+                                                field[1],
+                                            )}
+                                        </span>
                                     </td>
                                 ))}
                             </tr>

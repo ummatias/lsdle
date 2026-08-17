@@ -99,16 +99,16 @@ function handleGuessColor(
         : [dailyMemberField];
 
     if (guessArray.toString() === dailyArray.toString()) {
-        return "bg-[#52bebc7d]";
+        return "bg-[#52bebd33] text-[#2f8a89]";
     }
 
     if (
         guessArray.some((item) => dailyArray.includes(item)) ||
         dailyArray.some((item) => guessArray.includes(item))
     ) {
-        return "bg-[#dd935678]";
+        return "bg-[#dd935633] text-[#a2611f]";
     }
-    return "bg-[#de576581]";
+    return "bg-[#de576433] text-[#a3222d]";
 }
 
 const removeAccents = (str: string): string => {
